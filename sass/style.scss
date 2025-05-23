@@ -1,5 +1,181 @@
+@import "style-default";
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html{
+    font-family: "Rubik";
+    font-size: 62.5%;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+}
+.main{
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    display: flex;
+    @include flex(row, center, center);
+    background-color: $navy-950;
+    overflow-y: scroll;
+
+}
+.main__container{
+    display: grid;
+    place-items: center;
+    @media screen and (max-width: 435px) {
+        width:                 clamp(300px, 87vw, 400px);
+        height:                auto;
+        gap:                   2.4rem 0;
+        grid-template-columns: 1fr;
+        grid-template-rows:    20.3rem repeat(6, 1fr);
+        margin:                8vw 0;
+    }
+    @media screen and (min-width: 435px) and (max-width: 1024px) {
+        @media screen and (orientation: landscape){
+            width:                 clamp(750px, 77.5vw, 2000px);
+            height:                clamp(317px, 50.79vh, 900px);
+            gap:                   clamp(10px, 6.15%, 50px) clamp(10px, 2.86%, 50px);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows:    repeat(2, 1fr);
+        }
+        width:                 clamp(370px, 79.69vw, 750px);
+        height:                clamp(370px, 66.12vh, 750px);
+        gap:                   clamp(10px, 2.4vh, 50px) clamp(10px, 3.12vw, 50px);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows:    19.83vh repeat(2, 1fr);
+    }
+    @media screen and (min-width: 1024px) {
+        @media screen and (orientation: portrait){
+            width:                 clamp(370px, 79.69vw, 750px);
+            height:                clamp(370px, 66.12vh, 750px);
+            gap:                   clamp(10px, 1.86vh, 50px) clamp(10px, 3.12vw, 50px);
+            grid-template-columns: repeat(3, 1fr);
+        }
+        width:                 clamp(750px, 77.5vw, 2000px);
+        height:                clamp(317px, 50.79vh, 900px);
+        gap:                   clamp(10px, 6.15%, 50px) clamp(10px, 2.86%, 50px);
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.head{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 20.3rem;
+    background-color: $navy-900;
+    border-radius: 15px;
+    @include flex(column, flex-start, center);
+    gap: 2.4rem;
+    //////////////// tut
+    @media screen and (min-width: 435px) and (max-width: 1024px){
+        @media screen and (orientation: landscape){
+            grid-column: 1/2;
+            grid-row: 1/3;
+        }
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+    @media screen and (min-width: 1024px) {
+        @media screen and (orientation: portrait){
+            grid-column: 1/4;
+            grid-row: 1/2;
+        }
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+}
+.user-container{
+    width: 100%;
+    height: 10vh;
+    background-color: $purple-600;
+    border-radius: 15px;
+}
+.card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    @media screen and (max-width: 435px) {
+        height: 16rem;
+    };
+}
+.card__img{  
+    position: absolute;
+    #work &     {top: -1.091rem; right: 1.7rem};
+    #play &     {top: -1.44rem;  right: 2.1rem;};
+    #study &    {top: -.605rem;  right: 1.7rem;};
+    #exercise & {top: -.042rem;  right: 1.7rem;};
+    #social &   {top: -1.5rem;   right: 1.3rem;};
+    #self_care &{top: -1.1rem;   right: 1.6rem;};
+    @media screen and (min-width: 1024px) {
+        #play &{top: -0.44rem;  right: 2.1rem;};
+    }
+    @media screen and (min-width: 435px) and (max-width: 1024px) {
+        #work &{
+            top: -.804rem; right: 1.3rem; & img{ height: 58px; width: 58px; };
+        };
+        #play &{
+            top: -.7rem; right: 1.6rem; & img{ height: 66px; width: 66px; };
+        };
+        #study &{
+            top: -.446rem; right: 1.2rem; & img{ height: 57px; width: 57px; };
+        };
+        #exercise & {
+            top: -.031rem; right: 1.3rem; & img{ height: 40px; width: 59px; };
+        };
+        #social & {
+            top: -1.2rem; right: 1.1rem; & img{ height: 74px; width: 55px; };
+        };
+        #self_care &{
+            top: -1.1rem; right: 1.2rem; & img{ height: 50px; width: 50px; };
+        };
+    }
+}
+.card__content{
+    position: absolute;
+    width: 100%;
+    border-radius: 15px;
+    background-color: $navy-900;
+    padding: 2.4rem;
+    @include flex(column, flex-start, center);
+    @media screen and (max-width: 435px){
+        $top: 3.8rem;
+        top: $top;
+        height: calc(100% - $top);
+        gap: .8rem 0;
+    }
+    @media screen and (min-width: 435px) and (max-width: 1024px) {
+        $top: 3.3rem;
+        top: $top;
+        height: calc(100% - $top);
+        gap: 1.6rem 0;
+    }
+    @media screen and (min-width: 1024px) {
+        $top: 4.5rem;
+        top: $top;
+        height: calc(100% - $top);
+        padding: 3.2rem;
+        gap: 2.4rem 0;
+    }
+}
+.activity-header{
+    width: 100%;
+    @include flex(row, space-between, center);
+}
+.activity-stats{
+    width: 100%;
+    @include flex(column, flex-start, flex-start);
+    gap: .8rem 0;
+    @media screen and (max-width: 435px){
+        @include flex(row, space-between, center);
+    }
 }

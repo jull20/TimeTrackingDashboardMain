@@ -2,79 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="script.js"></script>
   
   <title>Frontend Mentor | Time tracking dashboard</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main class="main">
+    <div class="main__container">
+      <div class="head">
+        <div class="user-container"></div>
+        <div class="menu-period"></div>
+      </div>
+      <div class="card" id="work">
+          <div class="card__img"><img src="assets/images/icon-work.svg" alt=""></div>
+          <div class="card__content">
+            <div class="activity-header">
+              <p class="activity-name">Work</p>
+              <div class="three-dots"><img src="assets/images/icon-ellipsis.svg" alt=""></div>
+            </div>
+            <div class="activity-stats">
+              <div class="current-state">
+                <p><span>32</span>hrs</p>
+              </div>
+              <div class="previous-state">
+                <p>Last Week - <span>36</span>hrs</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="card" id="play">
+          <div class="card__img"><img src="assets/images/icon-play.svg" alt=""></div>
+          <div class="card__content">
+            <div class="activity-header">
+              <p class="activity-name">Play</p>
+              <div class="three-dots"><img src="assets/images/icon-ellipsis.svg" alt=""></div>
+            </div>
+            <div class="activity-stats">
+              <div class="current-state">
+                <p><span>32</span>hrs</p>
+              </div>
+              <div class="previous-state">
+                <p>Last Week - <span>36</span>hrs</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="card" id="study">
+          <div class="card__img"><img src="assets/images/icon-study.svg" alt=""></div>
+          <div class="card__content">
+            <div class="activity-header">
+              <p class="activity-name">Study</p>
+              <div class="three-dots"><img src="assets/images/icon-ellipsis.svg" alt=""></div>
+            </div>
+            <div class="activity-stats">
+              <div class="current-state">
+                <p><span>32</span>hrs</p>
+              </div>
+              <div class="previous-state">
+                <p>Last Week - <span>36</span>hrs</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="card" id="exercise">
+          <div class="card__img"><img src="assets/images/icon-exercise.svg" alt=""></div>
+          <div class="card__content">
+            <div class="activity-header">
+              <p class="activity-name">Exercise</p>
+              <div class="three-dots"><img src="assets/images/icon-ellipsis.svg" alt=""></div>
+            </div>
+            <div class="activity-stats">
+              <div class="current-state">
+                <p><span>32</span>hrs</p>
+              </div>
+              <div class="previous-state">
+                <p>Last Week - <span>36</span>hrs</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="card" id="social">
+          <div class="card__img"><img src="assets/images/icon-social.svg" alt=""></div>
+          <div class="card__content">
+            <div class="activity-header">
+              <p class="activity-name">Social</p>
+              <div class="three-dots"><img src="assets/images/icon-ellipsis.svg" alt=""></div>
+            </div>
+            <div class="activity-stats">
+              <div class="current-state">
+                <p><span>32</span>hrs</p>
+              </div>
+              <div class="previous-state">
+                <p>Last Week - <span>36</span>hrs</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="card" id="self_care">
+          <div class="card__img"><img src="assets/images/icon-self-care.svg" alt=""></div>
+          <div class="card__content">
+            <div class="activity-header">
+              <p class="activity-name">Self Care</p>
+              <div class="three-dots"><img src="assets/images/icon-ellipsis.svg" alt=""></div>
+            </div>
+            <div class="activity-stats">
+              <div class="current-state">
+                <p><span>32</span>hrs</p>
+              </div>
+              <div class="previous-state">
+                <p>Last Week - <span>36</span>hrs</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

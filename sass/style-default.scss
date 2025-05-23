@@ -1,0 +1,102 @@
+@font-face {
+    font-family: "Rubik";
+    src: url("../assets/font/Rubik-VariableFont_wght.ttf");
+}
+
+$white:      #FFFFFF;
+$black:      #000000;
+$navy-200:   #BBC0FF;
+$navy-800:   #33397A;
+$navy-900:   #1C204B;
+$navy-950:   #0E1323;
+$purple-500: #7078C9;
+$purple-600: #5747EA;
+$purple-700: #7335D2;
+$orange:     #FF8B64;
+$blue:       #55C2E6;
+$pink:       #FF5E7D;
+$green:      #4BCF82;
+$yellow:     #F1C75B;
+$grey:       #D8D8D8;
+$spacing-0:   0;
+$spacing-100: .8rem;
+$spacing-200: 1.6rem;
+$spacing-300: 2.4rem;
+$spacing-400: 3.2rem;
+$spacing-500: 4rem;
+
+@mixin text-preset-1{
+    font-size: 5.6rem;
+    font-weight: 300;
+    line-height: 6.6rem;
+    letter-spacing: 0;
+}
+@mixin text-preset-2{
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 4.7rem;
+    letter-spacing: 0;
+}
+@mixin text-preset-3{
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 3.8rem;
+    letter-spacing: 0;
+}
+@mixin text-preset-4{
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 2.8rem;
+    letter-spacing: 0;
+}
+@mixin text-preset-5-400{
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    letter-spacing: 0;
+}
+@mixin text-preset-5-500{
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.1rem;
+    letter-spacing: 0;
+}
+@mixin text-preset-6{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: 0;
+}
+
+@mixin flex($direction, $main-axis, $cross-axis){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $main-axis;
+    align-items: $cross-axis;
+}
+
+.activity-name{
+    color: $white;
+    @include text-preset-5-500;
+}
+.current-state{
+    color: $white;
+    @include text-preset-1;
+    @media screen and (max-width: 435px){
+        &{
+            @include text-preset-3;
+        }
+    }
+}
+.previous-state{
+    color: $navy-200;
+    @include text-preset-6;
+}
+.card{
+    &#work     {background: linear-gradient(180deg, $orange 32%, $navy-900 0);};
+    &#play     {background: linear-gradient(180deg, $blue 32%, $navy-900 0);};
+    &#study    {background: linear-gradient(180deg, $pink 32%, $navy-900 0);};
+    &#exercise {background: linear-gradient(180deg, $green 32%, $navy-900 0);};
+    &#social   {background: linear-gradient(180deg, $purple-700 32%, $navy-900 0);};
+    &#self_care{background: linear-gradient(180deg, $yellow 32%, $navy-900 0);};
+}
