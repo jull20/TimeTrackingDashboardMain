@@ -50,7 +50,7 @@ body{
         height:                clamp(370px, 66.12vh, 750px);
         gap:                   clamp(10px, 2.4vh, 50px) clamp(10px, 3.12vw, 50px);
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows:    19.83vh repeat(2, 1fr);
+        grid-template-rows:    20.3rem repeat(2, 1fr);
     }
     @media screen and (min-width: 1024px) {
         @media screen and (orientation: portrait){
@@ -58,6 +58,8 @@ body{
             height:                clamp(370px, 66.12vh, 750px);
             gap:                   clamp(10px, 1.86vh, 50px) clamp(10px, 3.12vw, 50px);
             grid-template-columns: repeat(3, 1fr);
+            grid-template-rows:    20.3rem repeat(2, 1fr);
+
         }
         width:                 clamp(750px, 77.5vw, 2000px);
         height:                clamp(317px, 50.79vh, 900px);
@@ -69,12 +71,10 @@ body{
     position: relative;
     width: 100%;
     height: 100%;
-    max-height: 20.3rem;
     background-color: $navy-900;
     border-radius: 15px;
     @include flex(column, flex-start, center);
     gap: 2.4rem;
-    //////////////// tut
     @media screen and (min-width: 435px) and (max-width: 1024px){
         @media screen and (orientation: landscape){
             grid-column: 1/2;
@@ -84,7 +84,9 @@ body{
         grid-row: 1/2;
     }
     @media screen and (min-width: 1024px) {
+        @include flex(column, flex-start, flex-start);
         @media screen and (orientation: portrait){
+            @include flex(column, flex-start, center);
             grid-column: 1/4;
             grid-row: 1/2;
         }
@@ -94,9 +96,46 @@ body{
 }
 .user-container{
     width: 100%;
-    height: 10vh;
+    padding: 3.2rem;
+    box-sizing: border-box;
     background-color: $purple-600;
     border-radius: 15px;
+    @include flex(row, flex-start, center);
+    gap: 4rem 2.4rem;
+    @media screen and (min-width: 1024px) {
+        height: clamp(25.3rem, 68%, 50rem);
+        @include flex(column, flex-start, flex-start);
+        @media screen and (orientation: portrait){
+            @include flex(row, flex-start, flex-start);
+        }
+    }
+}
+.img img{
+    border: 3px solid $white;
+    border-radius: 100%;
+    width: 6.4rem;
+    height: 6.4rem;
+    @media screen and (min-width: 1024px) {
+        width:  7.2rem;
+        height: 7.2rem;
+    }
+}
+
+.menu-period{
+    width: 100%;
+    max-width: 34.3rem;
+    @include flex(row, space-evenly, center);
+    gap: 2.1rem .8rem;
+    @media screen and (max-width: 435px) {
+        gap: 0;
+    }
+    @media screen and (min-width: 1024px) {
+        @include flex(column, flex-start, flex-start);
+        padding: 0 0 3.2rem 3.2rem;
+        @media screen and (orientation: portrait){
+            @include flex(row, space-evenly, center);
+        }
+    }
 }
 .card{
     position: relative;

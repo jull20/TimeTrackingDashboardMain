@@ -53,6 +53,46 @@
   background: linear-gradient(180deg, #F1C75B 32%, #1C204B 0);
 }
 
+.card__content:hover {
+  background-color: #33397A;
+}
+
+.menu-period a {
+  color: #7078C9;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.1rem;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+.menu-period a.active-period {
+  color: #FFFFFF;
+}
+
+.description {
+  color: #BBC0FF;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  letter-spacing: 0;
+}
+
+.user-name {
+  color: #FFFFFF;
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 2.8rem;
+  letter-spacing: 0;
+}
+@media screen and (min-width: 1024px) {
+  .user-name {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 4.7rem;
+    letter-spacing: 0;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -105,7 +145,7 @@ body {
     height: clamp(370px, 66.12vh, 750px);
     gap: clamp(10px, 2.4vh, 50px) clamp(10px, 3.12vw, 50px);
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 19.83vh repeat(2, 1fr);
+    grid-template-rows: 20.3rem repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 435px) and (max-width: 1024px) and (orientation: landscape) {
@@ -131,6 +171,7 @@ body {
     height: clamp(370px, 66.12vh, 750px);
     gap: clamp(10px, 1.86vh, 50px) clamp(10px, 3.12vw, 50px);
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20.3rem repeat(2, 1fr);
   }
 }
 
@@ -138,7 +179,6 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  max-height: 20.3rem;
   background-color: #1C204B;
   border-radius: 15px;
   display: flex;
@@ -161,12 +201,20 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     grid-column: 1/2;
     grid-row: 1/3;
   }
 }
 @media screen and (min-width: 1024px) and (orientation: portrait) {
   .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     grid-column: 1/4;
     grid-row: 1/2;
   }
@@ -174,9 +222,77 @@ body {
 
 .user-container {
   width: 100%;
-  height: 10vh;
+  padding: 3.2rem;
+  box-sizing: border-box;
   background-color: #5747EA;
   border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4rem 2.4rem;
+}
+@media screen and (min-width: 1024px) {
+  .user-container {
+    height: clamp(25.3rem, 68%, 50rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1024px) and (orientation: portrait) {
+  .user-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.img img {
+  border: 3px solid #FFFFFF;
+  border-radius: 100%;
+  width: 6.4rem;
+  height: 6.4rem;
+}
+@media screen and (min-width: 1024px) {
+  .img img {
+    width: 7.2rem;
+    height: 7.2rem;
+  }
+}
+
+.menu-period {
+  width: 100%;
+  max-width: 34.3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2.1rem 0.8rem;
+}
+@media screen and (max-width: 435px) {
+  .menu-period {
+    gap: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu-period {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 0 3.2rem 3.2rem;
+  }
+}
+@media screen and (min-width: 1024px) and (orientation: portrait) {
+  .menu-period {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 
 .card {

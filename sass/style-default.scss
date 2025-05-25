@@ -83,9 +83,7 @@ $spacing-500: 4rem;
     color: $white;
     @include text-preset-1;
     @media screen and (max-width: 435px){
-        &{
-            @include text-preset-3;
-        }
+        @include text-preset-3;
     }
 }
 .previous-state{
@@ -99,4 +97,26 @@ $spacing-500: 4rem;
     &#exercise {background: linear-gradient(180deg, $green 32%, $navy-900 0);};
     &#social   {background: linear-gradient(180deg, $purple-700 32%, $navy-900 0);};
     &#self_care{background: linear-gradient(180deg, $yellow 32%, $navy-900 0);};
+}
+.card__content:hover{
+    background-color: $navy-800;
+}
+.menu-period a{
+    color: $purple-500;
+    @include text-preset-5-400;
+    text-decoration: none;
+    &.active-period{
+        color: $white;
+    }
+}
+.description{
+    color: $navy-200;
+    @include text-preset-6;
+}
+.user-name{
+    color: $white;
+    @include text-preset-4;  
+    @media screen and (min-width: 1024px){
+        @include text-preset-2;
+    }
 }
