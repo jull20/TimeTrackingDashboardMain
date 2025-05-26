@@ -12,7 +12,7 @@
 
 .current-state {
   color: #FFFFFF;
-  font-size: 5.6rem;
+  font-size: clamp(4rem, 6vh, 5.6rem);
   font-weight: 300;
   line-height: 6.6rem;
   letter-spacing: 0;
@@ -249,6 +249,14 @@ body {
     align-items: flex-start;
   }
 }
+@media screen and (min-width: 435px) and (max-width: 1024px) and (orientation: landscape) {
+  .user-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
 
 .img img {
   border: 3px solid #FFFFFF;
@@ -275,6 +283,15 @@ body {
 @media screen and (max-width: 435px) {
   .menu-period {
     gap: 0;
+  }
+}
+@media screen and (min-width: 435px) and (max-width: 1024px) and (orientation: landscape) {
+  .menu-period {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 0 3.2rem 3.2rem;
   }
 }
 @media screen and (min-width: 1024px) {

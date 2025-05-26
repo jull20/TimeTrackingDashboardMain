@@ -26,7 +26,8 @@ $spacing-400: 3.2rem;
 $spacing-500: 4rem;
 
 @mixin text-preset-1{
-    font-size: 5.6rem;
+    font-size: clamp(4rem, 6vh, 5.6rem);
+    // font-size: 5.6rem;
     font-weight: 300;
     line-height: 6.6rem;
     letter-spacing: 0;
@@ -91,12 +92,12 @@ $spacing-500: 4rem;
     @include text-preset-6;
 }
 .card{
-    &#work     {background: linear-gradient(180deg, $orange 32%, $navy-900 0);};
-    &#play     {background: linear-gradient(180deg, $blue 32%, $navy-900 0);};
-    &#study    {background: linear-gradient(180deg, $pink 32%, $navy-900 0);};
-    &#exercise {background: linear-gradient(180deg, $green 32%, $navy-900 0);};
+    &#work     {background: linear-gradient(180deg, $orange     32%, $navy-900 0);};
+    &#play     {background: linear-gradient(180deg, $blue       32%, $navy-900 0);};
+    &#study    {background: linear-gradient(180deg, $pink       32%, $navy-900 0);};
+    &#exercise {background: linear-gradient(180deg, $green      32%, $navy-900 0);};
     &#social   {background: linear-gradient(180deg, $purple-700 32%, $navy-900 0);};
-    &#self_care{background: linear-gradient(180deg, $yellow 32%, $navy-900 0);};
+    &#self_care{background: linear-gradient(180deg, $yellow     32%, $navy-900 0);};
 }
 .card__content:hover{
     background-color: $navy-800;

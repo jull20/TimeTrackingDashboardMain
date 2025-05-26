@@ -109,6 +109,11 @@ body{
             @include flex(row, flex-start, flex-start);
         }
     }
+    @media screen and (min-width: 435px) and (max-width: 1024px){
+        @media screen and (orientation: landscape){
+            @include flex(column, flex-start, flex-start);
+        }
+    }
 }
 .img img{
     border: 3px solid $white;
@@ -128,6 +133,12 @@ body{
     gap: 2.1rem .8rem;
     @media screen and (max-width: 435px) {
         gap: 0;
+    }
+    @media screen and (min-width: 435px) and (max-width: 1024px){
+        @media screen and (orientation: landscape){
+            @include flex(column, flex-start, flex-start);
+            padding: 0 0 3.2rem 3.2rem;
+        }
     }
     @media screen and (min-width: 1024px) {
         @include flex(column, flex-start, flex-start);
@@ -204,6 +215,7 @@ body{
         height: calc(100% - $top);
         padding: 3.2rem;
         gap: 2.4rem 0;
+        // gap: clamp(1rem, 2vh, 3.4rem) 0;
     }
 }
 .activity-header{
